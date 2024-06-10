@@ -8,25 +8,23 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('admins', function (Blueprint $table) {
             $table->id();
-            $table->string('username',60);
-            $table->string('fullname',60);
-            $table->string('password',40);
+            $table->string('username');
+            $table->string('fullname');
+            $table->string('password');
+            $table->string('profil')->nullable();
+            $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('admins');
     }

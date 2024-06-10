@@ -8,25 +8,19 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('persediaans', function (Blueprint $table) {
             $table->id();
-            $table->string('namabarang',160);
-            $table->integer('minimalstock');
-            $table->string('satuan', 30);
+            $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('persediaans');
     }
