@@ -10,11 +10,19 @@ use App\Models\Pemakaian;
 
 class PemakaianController extends Controller
 {
-    
-    public function pakai_tambah()
+    public function pemakaian_index()
+    {
+        $data = Pemakaian::all();
+        return view('pemakaian.pemakaian', compact('data'));
+    }
+
+    public function pemakaian_tambah()
     {
         return view('pemakaian.pemakaian_tambah');
     }
 
-   
+    public function pemakaian_simpan()
+    {
+        return view('pemakaian.pemakaian_simpan');
+    }
 }

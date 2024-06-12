@@ -60,6 +60,7 @@
                             <th width="100">Aksi</th>
                         </tr>
                     </thead>
+                    
                 </table>
             </div>
         </div>

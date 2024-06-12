@@ -8,6 +8,7 @@ class PersediaanController extends Controller
 {
     public function persediaan_index()
     {
+        // $data = Persediaan::all();
         return view('persediaan.persediaan');
     }
 
