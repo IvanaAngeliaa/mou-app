@@ -41,3 +41,4 @@ Route::post('/produk-simpan', [Produk::class, 'produk_simpan'])->name('produk_si
 
 //Persediaan
 Route::get('persediaan', [Persediaan::class, 'persediaan_index'])->name('persediaan_index');
+Route::get('/persediaan-tambah', [Persediaan::class, 'persediaan_tambah'])->name('persediaan_tambah');
