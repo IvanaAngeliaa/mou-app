@@ -37,6 +37,7 @@ Route::post('/user-hapus/{id}', [User::class, 'user_hapus'])->name('user_hapus')
 //Produk
 Route::get('/produk', [Produk::class, 'produk_index'])->name('produk_index');
 Route::get('/produk-tambah', [Produk::class, 'produk_tambah'])->name('produk_tambah');
+Route::get('/produk-edit/{id}', [User::class, 'produk_edit'])->name('produk_edit');
 Route::post('/produk-simpan', [Produk::class, 'produk_simpan'])->name('produk_simpan');
 
 //Persediaan

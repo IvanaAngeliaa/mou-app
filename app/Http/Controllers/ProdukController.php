@@ -32,7 +32,7 @@ class ProdukController extends Controller
         ], $customMessage);
 
         $data = new Produk();
-        $data->nama_produk = $request->namaproduk;
+        $data->namaproduk = $request->namaproduk;
         $data->harga = $request->harga;
         $data->save();
         if($request->deskripsi)
