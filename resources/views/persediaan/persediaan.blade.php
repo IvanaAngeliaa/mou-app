@@ -1,5 +1,6 @@
 @extends('main')
 @section('content')
+
 <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -38,11 +39,11 @@
             </h6>
 
         <div class="card-body">
-            <a href="index.php?menu=persediaan&aksi=tambah" class="btn btn-custom">
+            <a href="{{route('persediaan_tambah')}}" class="btn btn-custom">
                 <i class="fas fa-plus"></i> Tambah
             </a>
 
-            <a href="index.php?menu=persediaan&aksi=pakai" class="btn btn-custom">
+            <a href="{{route('pakai_tambah')}}" class="btn btn-custom">
                 <i class="fas fa-edit"></i> Pemakaian
             </a>
 

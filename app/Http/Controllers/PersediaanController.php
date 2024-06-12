@@ -20,8 +20,8 @@ class PersediaanController extends Controller
     public function persediaan_simpan(Request $request)
     {
         $data = new Persediaan();
-        $data->nama_persediaan = $request->namabarang;
-        $data->minimal_stock = $request->minimalstock;
+        $data->namabarang = $request->namabarang;
+        $data->minimalstock = $request->minimalstock;
         $data->save();
         if($request->satuan)
         {
