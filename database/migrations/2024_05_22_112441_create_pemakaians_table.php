@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('pemakaians', function (Blueprint $table) {
             $table->id();
+            // $table->foreign('idpakai')->references('id')->on('persediaan');
             $table->integer('idpakai')->length(11);
             $table->integer('stock')->length(11);
             $table->date('tanggal');
             $table->date('kadaluarsa');
             $table->string('status',40);
 
-           // $table->foreign('idpakai')->references('id')->on('persediaan');
         });
     }
 
