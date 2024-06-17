@@ -24,6 +24,20 @@
                             <th>Satuan</th>
                         </tr>
                     </thead>
+                    <tbody>
+                        
+                        @foreach($data as $data)
+                        <tr>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $data->namabarang }}</td>
+                            <td>{{ $data->kategori->namakategori }}</td>
+                            <td>{{ $data->minimalstock }}</td>
+                            <td>{{ $data->satuan }}</td>
+                            
+                        </tr>
+                        @endforeach
+                    </tbody>
+
                 </table>
             </div>
         </div>

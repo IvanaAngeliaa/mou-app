@@ -15,4 +15,9 @@ class Persediaan extends Model
         'minimalstock',
         'satuan'
     ];
+
+    public function kategori()
+    {
+        return $this->belongsTo('App\Models\Kategori', 'kategori_id');
+    }
 }

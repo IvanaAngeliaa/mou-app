@@ -13,4 +13,9 @@ class Kategori extends Model
         'id',
         'namakategori'
     ];
+
+    public function persediaan()
+    {
+        return $this->hasMany('App\Models\Persediaan', 'id');
+    }
 }
