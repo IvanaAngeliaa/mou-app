@@ -2,66 +2,68 @@
 @section('content')
 <div class="container-fluid">
 
-<!-- Page Heading -->
-<h1 class="h3 mb-2 text-custom">Manajemen Pemakaian Barang</h1>
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-primaryx" style="color:#e0ba75";>Manajemen Persediaan Barang</h1>
 
-<!-- DataTales Example -->
-<div class="card shadow mb-4">
-    <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-custom">
-            Form Pemakaian Barang
-        </h6>
-    </div>
-    <form action="{{route('pemakaian_simpan')}}" method="post" enctype="multipart/form-data">
-    @csrf
-    <div class="card-body">
-        <div class="form-group">
-            <label>ID Barang:</label>
-            <!-- <input type="text" class="form-control" placeholder=" " name="idbarang" required> -->
-            <select name="id" class="form-control" required value="<?=$data['idbarang'];?>">
-                 <option value=""selected disabled hidden>Pilih ID</option>
-                    <?php
-                        $sqlcekID="SELECT idbarang FROM mou_persediaan";
-                        $query=mysqli_query($con,$sqlcekID);
-                        while($row=mysqli_fetch_array($query))
-                        {
-                            echo "<option value='" . $row['idbarang'] . "'>" . $row['idbarang'] . "</option>";
-                        }
-                    ?>
-            </select>
-        </div>
-        <div class="form-group">
-            <label>Stock:</label>
-            <input type="number" class="form-control" placeholder=" Masukan Jumlah Stock" name="stock" required>
-        </div>
-        <div class="form-group">
-            <label>Tanggal:</label>
-            <input type="date" class="form-control" placeholder=" Pilih tanggal" name="tanggal" required>
-        </div>
-        <div class="form-group">
-            <label>Kadaluarsa:</label>
-            <input type="date" class="form-control" placeholder=" Pilih tanggal" name="kadaluarsa">
-        </div>
-        <div class="form-group">
-            <label>Status:</label>
-            <!-- <input type="date" class="form-control" placeholder=" Pilih tanggal" name="status" required> -->
-            <select name="status" class="form-control">
-                <option value=""selected disabled hidden>Pilih Status</option>
-                <option value="masuk">Masuk</option>
-                <option value="keluar">Keluar</option>
-            </select>
-        </div>
-    </div>
-    <div class="card-footer">
-        <button type="submit" class="btn btn-primary">
-            <i class="fas fa-save"></i> Simpan
-        </button>
-        <a href="index.php?menu=persediaan" class="btn btn-warning">
-            <i class="fas fa-arrow-left"></i> Kembali
-        </a>
-    </div>
-    </form>
-</div>
+    <!-- Info tabel -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold" style="color:#e0ba75";>
+               Informasi Persediaan Barang
+            </h6>
 
+            <div class="card-body">
+        <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th width="75">Id Barang</th>
+                            <th>Nama Barang</th>
+                            <th>Kategori</th>
+                            <th>Stock</th>
+                            <th>Satuan</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- tabel edit -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold" style="color:#e0ba75";>
+                Persediaan Barang
+            </h6>
+
+        <div class="card-body">
+            <a href="{{route('persediaan_tambah')}}" class="btn btn-custom">
+                <i class="fas fa-plus"></i> Tambah
+            </a>
+
+            <a href="{{route('pemakaian_tambah')}}" class="btn btn-custom">
+                <i class="fas fa-edit"></i> Pemakaian
+            </a>
+
+        </div>
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th width="100">Id Barang</th>
+                            <th>Stock</th>
+                            <th>Status</th>
+                            <th>Tanggal</th>
+                            <!-- <th>Tanggal Keluar</th> -->
+                            <th>Kadaluarsa</th>
+                            <th width="100">Aksi</th>
+                        </tr>
+                    </thead>
+                    
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection

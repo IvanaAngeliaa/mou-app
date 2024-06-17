@@ -12,7 +12,7 @@ class PemakaianController extends Controller
 {
     public function pemakaian_index()
     {
-        $data = Pemakaian::all();
+        // $data = Pemakaian::all();
         return view('pemakaian.pemakaian', compact('data'));
     }
 
@@ -25,4 +25,5 @@ class PemakaianController extends Controller
     {
         return view('pemakaian.pemakaian_simpan');
     }
+    
 }

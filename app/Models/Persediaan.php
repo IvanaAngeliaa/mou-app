@@ -10,6 +10,7 @@ class Persediaan extends Model
     use HasFactory;
     protected $table ='persediaans';
     protected $fillable = [
+        'kategori',
         'namabarang',
         'minimalstock',
         'satuan'

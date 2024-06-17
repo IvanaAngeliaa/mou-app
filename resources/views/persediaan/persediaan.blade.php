@@ -1,6 +1,5 @@
 @extends('main')
 @section('content')
-
 <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -43,7 +42,7 @@
                 <i class="fas fa-plus"></i> Tambah
             </a>
 
-            <a href="{{route('pakai_tambah')}}" class="btn btn-custom">
+            <a href="{{route('pemakaian_tambah')}}" class="btn btn-custom">
                 <i class="fas fa-edit"></i> Pemakaian
             </a>
 

@@ -19,18 +19,7 @@
     <div class="card-body">
         <div class="form-group">
             <label>ID Barang:</label>
-            <!-- <input type="text" class="form-control" placeholder=" " name="idbarang" required> -->
-            <select name="id" class="form-control" required value="<?=$data['idbarang'];?>">
-                 <option value=""selected disabled hidden>Pilih ID</option>
-                    <?php
-                        $sqlcekID="SELECT idbarang FROM mou_persediaan";
-                        $query=mysqli_query($con,$sqlcekID);
-                        while($row=mysqli_fetch_array($query))
-                        {
-                            echo "<option value='" . $row['idbarang'] . "'>" . $row['idbarang'] . "</option>";
-                        }
-                    ?>
-            </select>
+            <input type="text" class="form-control" placeholder=" " name="idbarang" required>
         </div>
         <div class="form-group">
             <label>Stock:</label>
@@ -58,7 +47,7 @@
         <button type="submit" class="btn btn-primary">
             <i class="fas fa-save"></i> Simpan
         </button>
-        <a href="{{route('pemakaian_index')}}" class="btn btn-warning">
+        <a href="{{route('persediaan_index')}}" class="btn btn-warning">
             <i class="fas fa-arrow-left"></i> Kembali
         </a>
     </div>

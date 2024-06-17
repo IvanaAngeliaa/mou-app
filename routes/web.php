@@ -41,11 +41,12 @@ Route::get('/produk-edit/{id}', [User::class, 'produk_edit'])->name('produk_edit
 Route::post('/produk-simpan', [Produk::class, 'produk_simpan'])->name('produk_simpan');
 
 //Persediaan
-Route::get('persediaan', [Persediaan::class, 'persediaan_index'])->name('persediaan_index');
+Route::get('/persediaan', [Persediaan::class, 'persediaan_index'])->name('persediaan_index');
 Route::get('/persediaan-tambah', [Persediaan::class, 'persediaan_tambah'])->name('persediaan_tambah');
 Route::post('/persediaan-simpan', [Persediaan::class, 'persediaan_simpan'])->name('persediaan_simpan');
 
 //Pemakaian
-Route::get('pemakaian', [Pemakaian::class, 'pemakaian_index'])->name('pemakaian_index');
+Route::get('/pemakaian', [Pemakaian::class, 'pemakaian_index'])->name('pemakaian_index');
 Route::get('/pemakaian-tambah', [pemakaian::class, 'pemakaian_tambah'])->name('pemakaian_tambah');
 Route::post('/pemakaian-simpan', [pemakaian::class, 'pemakaian_simpan'])->name('pemakaian_simpan');
+

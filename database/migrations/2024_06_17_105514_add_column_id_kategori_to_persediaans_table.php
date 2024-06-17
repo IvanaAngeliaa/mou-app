@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('persediaans', function (Blueprint $table) {
-            $table->id();
-            $table->string('namabarang');
-            $table->integer('minimalstock');
-            $table->string('satuan');
-            $table->timestamps();
+        Schema::table('persediaans', function (Blueprint $table) {
+            $table->foreignIdFor('App\Models\Kategori')->nullable()->constrained()->cascadeOnDelete();
         });
     }
 
@@ -25,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('persediaans');
+        Schema::table('persediaans', function (Blueprint $table) {
+            //
+        });
     }
 };
