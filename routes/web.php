@@ -6,7 +6,7 @@ use App\Http\Controllers\LoginController as Login;
 use App\Http\Controllers\MouUserController as User;
 use App\Http\Controllers\ProdukController as Produk;
 use App\Http\Controllers\PersediaanController as Persediaan;
-
+use App\Http\Controllers\PemakaianController as Pemakaian;
 
 /*
 |--------------------------------------------------------------------------
