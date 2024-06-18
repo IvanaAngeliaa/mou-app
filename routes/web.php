@@ -7,6 +7,7 @@ use App\Http\Controllers\MouUserController as User;
 use App\Http\Controllers\ProdukController as Produk;
 use App\Http\Controllers\PersediaanController as Persediaan;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,6 +48,6 @@ Route::post('/persediaan-simpan', [Persediaan::class, 'persediaan_simpan'])->nam
 
 //Pemakaian
 Route::get('/pemakaian', [Pemakaian::class, 'pemakaian_index'])->name('pemakaian_index');
-Route::get('/pemakaian-tambah', [pemakaian::class, 'pemakaian_tambah'])->name('pemakaian_tambah');
-Route::post('/pemakaian-simpan', [pemakaian::class, 'pemakaian_simpan'])->name('pemakaian_simpan');
+Route::get('/pemakaian-tambah', [Pemakaian::class, 'pemakaian_tambah'])->name('pemakaian_tambah');
+Route::post('/pemakaian-simpan', [Pemakaian::class, 'pemakaian_simpan'])->name('pemakaian_simpan');
 
