@@ -10,7 +10,7 @@ class Pemakaian extends Model
     use HasFactory;
     protected $table = 'pemakaians';
     protected $fillable = [ 
-        'idpakai',
+        'id_persediaans',
         'stock',
         'tanggal',
         'kadaluarsa',

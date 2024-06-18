@@ -26,13 +26,13 @@
                     </thead>
                     <tbody>
                         
-                        @foreach($data as $data)
+                        @foreach($datapersediaan as $d)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $data->namabarang }}</td>
-                            <td>{{ $data->kategori->namakategori }}</td>
-                            <td>{{ $data->minimalstock }}</td>
-                            <td>{{ $data->satuan }}</td>
+                            <td>{{ $datapersediaan->namabarang }}</td>
+                            <td>{{ ($datapersediaan->kategori) ? $data->kategori->namakategori : ""}}</td>
+                            <td>{{ $datapersediaan->minimalstock }}</td>
+                            <td>{{ $datapersediaan->satuan }}</td>
                             
                         </tr>
                         @endforeach
@@ -74,7 +74,16 @@
                             <th width="100">Aksi</th>
                         </tr>
                     </thead>
-                    
+                    @foreach($datapemakaian as $d)
+                        <tr>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $datapemakaian->stock }}</td>
+                            <td>{{ $datapemakaian->status }}</td>
+                            <td>{{ $datapemakaian->tanggal }}</td>
+                            <td>{{ $datapemakaian->kadaluarsa }}</td>
+                        
+                        </tr>
+                        @endforeach
                 </table>
             </div>
         </div>

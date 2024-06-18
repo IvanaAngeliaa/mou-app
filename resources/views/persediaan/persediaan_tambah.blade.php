@@ -18,7 +18,7 @@
             <div class="form-group">
                 <label>Kategori :</label>
                     <select name="kategori" class="form-control">
-                        @foreach($data as $d)
+                        @foreach($datapersediaan as $d)
                             <option value="{{$d->id}}">{{$d->namakategori}}</option>
                         @endforeach
                         <option value="id"selected disabled hidden name="namakategori">Pilih Kategori</option>

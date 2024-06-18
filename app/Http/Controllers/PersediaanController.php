@@ -10,26 +10,26 @@ class PersediaanController extends Controller
 {
     public function persediaan_index()
     {
-        $data = Persediaan::all();
-        return view('persediaan.persediaan', compact('data'));
+        $datapersediaan = Persediaan::all();
+        return view('persediaan.persediaan', compact('datapersediaan'));
     }
 
     public function persediaan_tambah()
     {
-        $data = Kategori::all();
+        $datapersediaan = Kategori::all();
         
         // dd($data);
-        return view('persediaan.persediaan_tambah', compact('data'));
+        return view('persediaan.persediaan_tambah', compact('datapersediaan'));
     }
 
     public function persediaan_simpan(Request $request)
     {
-        $data = new Persediaan();
-        $data->kategori_id = $request->kategori;
-        $data->namabarang = $request->namabarang;
-        $data->minimalstock = $request->minimalstock;
-        $data->satuan = $request->satuan;
-        $data->save();
+        $datapersediaan = new Persediaan();
+        $datapersediaan->kategori_id = $request->kategori;
+        $datapersediaan->namabarang = $request->namabarang;
+        $datapersediaan->minimalstock = $request->minimalstock;
+        $datapersediaan->satuan = $request->satuan;
+        $datapersediaan->save();
         
         return redirect('persediaan')->with('success', 'Data berhasil disimpan');
     }
