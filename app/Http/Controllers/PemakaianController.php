@@ -13,26 +13,26 @@ class PemakaianController extends Controller
 {
     public function pemakaian_index()
     {
-        $datapemakaian = Pemakaian::all();
-        return view('persediaan.persediaan', compact('datapemakaian'));
+        $data = Pemakaian::all();
+        return view('persediaan.persediaan', compact('data'));
     }
 
     public function pemakaian_tambah()
     {
-        $datapemakaian = Persediaan::all();
-        return view('pemakaian.pemakaian_tambah', compact('datapemakaian'));
+        $data = Persediaan::all();
+        return view('pemakaian.pemakaian_tambah', compact('data'));
     }
 
     public function pemakaian_simpan (Request $request)
     {
         $request->all();
-        $datapemakaian = new Pemakaian();
-        $datapemakaian->id_persediaans = $request->id;
-        $datapemakaian->stock = $request->stock;
-        $datapemakaian->tanggal = $request->tanggal;
-        $datapemakaian->kadaluarsa = $request->kadaluarsa;
-        $datapemakaian->status = $request->status;
-        $datapemakaian->save();
+        $data = new Pemakaian();
+        $data->id_persediaans = $request->id;
+        $data->stock = $request->stock;
+        $data->tanggal = $request->tanggal;
+        $data->kadaluarsa = $request->kadaluarsa;
+        $data->status = $request->status;
+        $data->save();
         
         return redirect('pemakaian')->with('success', 'Data berhasil disimpan');
     }

@@ -24,7 +24,7 @@
                     <thead>
                         <tr>
                             <th width="50">No</th>
-                            <th>Nama Produk</th>
+                            <th width="100">Nama Produk</th>
                             <th width="100">Harga</th>
                             <th width="75">Foto</th>
                             <th width="100">aksi</th>
@@ -34,7 +34,7 @@
                         @foreach($data as $data)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $data->nama_produk }}</td>
+                            <td>{{ $data->namaproduk }}</td>
                             <td>{{ $data->harga }}</td>
                             <td>
                                 @if($data->foto)

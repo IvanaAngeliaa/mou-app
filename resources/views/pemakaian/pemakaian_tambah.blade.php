@@ -19,7 +19,7 @@
                 <label>ID Barang :</label>  
                 <select name="id" class="form-control">
                         <option value=""selected disabled hidden>Pilih ID Barang</option>
-                        @foreach($datapemakaian as $d)
+                        @foreach($data as $d)
                             <option value="{{$d->id}}">{{$d->id}}</option>
                         @endforeach
                     </select>
