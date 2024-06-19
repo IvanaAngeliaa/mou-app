@@ -14,7 +14,7 @@ class PemakaianController extends Controller
     public function pemakaian_index()
     {
         $data = Pemakaian::all();
-        return view('persediaan.persediaan', compact('data'));
+        return view('pemakaian.pemakaian', compact('data'));
     }
 
     public function pemakaian_tambah()
