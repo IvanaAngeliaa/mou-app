@@ -66,29 +66,37 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th width="100">Id Barang</th>
+                            <th width="300">Nama Barang</th>
                             <th>Stock</th>
                             <th>Status</th>
                             <th>Tanggal</th>
                             <!-- <th>Tanggal Keluar</th> -->
                             <th>Kadaluarsa</th>
-                            <th width="100">Aksi</th>
+                            <th width="150">Aksi</th>
                         </tr>
                     </thead>
                     @foreach($pemakaian as $data)
                         <tr>
                             <!-- <td>{{ $loop->iteration }}</td> -->
-                            <td>{{ $data->id_persediaans }}</td>
+                            <td>{{ $data->namabarang }}</td>
                             <td>{{ $data->stock }}</td>
                             <td>{{ $data->status }}</td>
                             <td>{{ $data->tanggal }}</td>
                             <td>{{ $data->kadaluarsa }}</td>
-                        </tr>
-                        <td>
-                                <a type="button" name="edit" id="{{ $data->id }}" value="{{ $data->id }}" class="btn btn-success" href="{{ route('user_edit', $data->id) }}">
+                            <td>
+                                <a type="button" name="edit" id="{{ $data->id }}" value="{{ $data->id }}" class="btn btn-success" href="{{ route('pemakaian_edit', $data->id) }}">
                                     <i class="fas fa-edit"></i>
                                 </a>
+                                <form id="del_event"  method="post" action="{{route('pemakaian_hapus', $data->id)}}" style="display: inline;">
+                                    @csrf
+                                    <button type="submit" class="btn btn-danger deleteBtn"><i class="fas fa-trash-alt"></i></button>
+                                </form>
+                                {{-- <a name="delete" id="{{$data->id}}" value="{{$data->id}}" class="btn btn-danger deleteBtn">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a> --}}
                             </td>
+                        </tr>
+                        
                         @endforeach
                 </table>
             </div>

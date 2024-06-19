@@ -53,4 +53,6 @@ Route::post('/persediaan-simpan', [Persediaan::class, 'persediaan_simpan'])->nam
 //Pemakaian
 Route::get('/pemakaian', [Pemakaian::class, 'pemakaian_index'])->name('pemakaian_index');
 Route::get('/pemakaian-tambah', [Pemakaian::class, 'pemakaian_tambah'])->name('pemakaian_tambah');
+Route::get('/pemakaian-edit/{id}', [User::class, 'pemakaian_edit'])->name('pemakaian_edit');
 Route::post('/pemakaian-simpan', [Pemakaian::class, 'pemakaian_simpan'])->name('pemakaian_simpan');
+Route::post('/pemakaian-hapus/{id}', [User::class, 'pemakaian_hapus'])->name('pemakaian_hapus');

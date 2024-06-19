@@ -13,19 +13,21 @@ class PersediaanController extends Controller
     {
         $persediaan = Persediaan::all();
         $pemakaian = Pemakaian::all();
+        //$pemakaian = Pemakaian::join('persediaans', 'pemakaians.id_persediaan', '=', 'persediaans.id')->get();
         return view('persediaan.persediaan', compact('persediaan','pemakaian'));
     }
 
     public function persediaan_tambah()
     {
         $data = Kategori::all();
-        
+        $pemakaian = Pemakaian::all();
         // dd($data);
-        return view('persediaan.persediaan_tambah', compact('data'));
+        return view('persediaan.persediaan_tambah', compact('data','pemakaian'));
     }
 
     public function persediaan_simpan(Request $request)
     {
+        $pemakaian = Pemakaian::all();
         $data = new Persediaan();
         $data->kategori_id = $request->kategori;
         $data->namabarang = $request->namabarang;
@@ -35,4 +37,6 @@ class PersediaanController extends Controller
         
         return redirect('persediaan')->with('success', 'Data berhasil disimpan');
     }
+
+    
 }

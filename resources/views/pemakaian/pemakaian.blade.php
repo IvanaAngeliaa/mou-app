@@ -69,7 +69,7 @@
                         @foreach($data as $data)
                         <tr>
                             <!-- <td>{{ $loop->iteration }}</td> -->
-                            <td>{{ $data->id_persediaans }}</td>
+                            <td>{{ $data->id_persediaan }}</td>
                             <td>{{ $data->stock }}</td>
                             <td>{{ $data->status }}</td>
                             <td>{{ $data->tanggal }}</td>
@@ -78,6 +78,9 @@
                         <td>
                                 <a type="button" name="edit" id="{{ $data->id }}" value="{{ $data->id }}" class="btn btn-success" href="{{ route('user_edit', $data->id) }}">
                                     <i class="fas fa-edit"></i>
+                                </a>
+                                <a name="delete" id="{{$data->id}}" value="{{$data->id}}" class="btn btn-danger" onclick="return confirm('Apakah ingin menghapus user?')">
+                                    <i class="fas fa-trash-alt"></i>
                                 </a>
                             </td>
                         @endforeach

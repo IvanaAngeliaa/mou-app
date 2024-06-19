@@ -14,7 +14,9 @@ class PemakaianController extends Controller
     public function pemakaian_index()
     {
         $data = Pemakaian::all();
-        return view('pemakaian.pemakaian', compact('data'));
+        $data = Persediaan::all();
+       // $persediaan = Persediaan::join('pemakaians', 'persediaans.id_pemakaians', '=', 'pemakaians.id')->get();
+        return view('pemakaian.pemakaian', compact('data','persedian'));
     }
 
     public function pemakaian_tambah()
@@ -41,6 +43,15 @@ class PemakaianController extends Controller
     {
         $data = Pemakaian::find($id);
         return view('pemakaian.pemakaian_ubah', compact('data'));
+    }
+
+    public function pemakaian_hapus($id)
+    {
+        $data = Pemakaian::find($id);
+        $filename = $data->id;
+        File::delete(public_path('/storage/pemakaian/'. $filename));
+        $data->delete();
+        return redirect('pemakaian')->with('success', 'Data berhasil dihapus');
     }
 
 }
