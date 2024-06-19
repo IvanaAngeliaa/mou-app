@@ -44,9 +44,6 @@
                                 @endif
                             </td>
                             <td>
-                                <a type="button" name="edit" id="{{ $data->id }}" value="{{ $data->id }}" class="btn btn-success" href="{{ route('produk_edit', $data->id) }}">
-                                    <i class="fas fa-edit"></i>
-                                </a>
                                 <a name="delete" id="{{$data->id}}" value="{{$data->id}}" class="btn btn-danger" onclick="return confirm('Apakah ingin menghapus user?')">
                                     <i class="fas fa-trash-alt"></i>
                                 </a>

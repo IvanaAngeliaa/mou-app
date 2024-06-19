@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller as Controller;
 use App\Http\Controllers\LoginController as Login;
+//use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MouUserController as User;
 use App\Http\Controllers\ProdukController as Produk;
 use App\Http\Controllers\PersediaanController as Persediaan;
@@ -26,6 +27,9 @@ Route::get('/dashboard', [Controller::class, 'dashboard'])->name('dashboard');
 Route::get('/lgn', [Login::class, 'login'])->name('login');
 Route::post('/login-proses', [Login::class, 'login_proses'])->name('login_proses');
 Route::get('/logout', [Login::class, 'logout'])->name('logout');
+
+//dashboard
+//Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
 //User
 Route::get('/user', [User::class, 'user_index'])->name('user_index');

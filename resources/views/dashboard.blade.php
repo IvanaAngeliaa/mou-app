@@ -14,7 +14,9 @@
             <!-- Project Card Example -->
             <div class="card shadow">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primaryx" style="color:#e0ba75";>Selamat datang, </h6>
+                    <h6 class="m-0 font-weight-bold text-primaryx" style="color:#e0ba75";>
+                        Selamat datang,  
+                    </h6>
                 </div>
                 <div class="card-body" align="center">
                   <b style="color:#e0ba75">  TIM MOU </b>

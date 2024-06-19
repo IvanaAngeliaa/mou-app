@@ -12,7 +12,7 @@
                 Form Tambah Data Produk
             </h6>
         </div>
-        <form action="produk_update.php" method="post" enctype="multipart/form-data">
+        <form action="{{ route('produk_update', $data->id) }}" method="post" enctype="multipart/form-data">
         <input type="hidden" name="idproduk" value="<?=$data['idproduk'];?>">
         <div class="card-body">
             <div class="form-group">

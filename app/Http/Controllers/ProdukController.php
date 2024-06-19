@@ -52,9 +52,5 @@ class ProdukController extends Controller
         return redirect('produk')->with('success', 'Data berhasil disimpan');
     }
 
-    public function produk_edit($id)
-    {
-        $data = Produk::find($id);
-        return view('produk.produk_ubah', compact('data'));
-    }
+    
 }
