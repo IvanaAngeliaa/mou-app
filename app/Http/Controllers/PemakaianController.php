@@ -37,4 +37,10 @@ class PemakaianController extends Controller
         return redirect('pemakaian')->with('success', 'Data berhasil disimpan');
     }
     
+    public function pemakaian_edit($id)
+    {
+        $data = Pemakaian::find($id);
+        return view('pemakaian.pemakaian_ubah', compact('data'));
+    }
+
 }
