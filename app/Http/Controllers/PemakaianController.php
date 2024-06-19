@@ -43,38 +43,4 @@ class PemakaianController extends Controller
         return view('pemakaian.pemakaian_ubah', compact('data'));
     }
 
-    public function pemakaian_update(Request $request, $id)
-    {
-        $data = Pemakaian::find($id);
-        if($request->stock)
-        {
-            $data->stock = $request->stock;
-            $data->save();
-        }
-        if($request->tanggal)
-        {
-            $data->tanggal = $request->tanggal;
-            $data->save();
-        }
-        if($request->kadaluarsa)
-        {
-            $data->kadaluarsa = $request->kadaluarsa;
-            $data->save();
-        }
-        if($request->status)
-        {
-            $data->status = $request->status;
-            $data->save();
-        }
-        return redirect('pemakaian')->with('success', 'Data berhasil diubah');   
-    }
-
-    public function pemakaian_hapus($id)
-    {
-        $data = Pemakaian::find($id);
-        $filename = $data->profil;
-        File::delete(public_path('/storage/pemakaian/'. $filename));
-        $data->delete();
-        return redirect('pemakaian')->with('success', 'Data berhasil dihapus');
-    }
 }

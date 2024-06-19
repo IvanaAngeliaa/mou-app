@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Kategori;
 use App\Models\Persediaan;
+use App\Models\Pemakaian;
 
 class PersediaanController extends Controller
 {
     public function persediaan_index()
     {
-        $data = Persediaan::all();
-        return view('persediaan.persediaan', compact('data'));
+        $persediaan = Persediaan::all();
+        $pemakaian = Pemakaian::all();
+        return view('persediaan.persediaan', compact('persediaan','pemakaian'));
     }
 
     public function persediaan_tambah()

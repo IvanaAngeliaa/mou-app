@@ -26,7 +26,7 @@
                     </thead>
                     <tbody>
                         
-                        @foreach($data as $data)
+                        @foreach($persediaan as $data)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $data->namabarang }}</td>
@@ -75,7 +75,21 @@
                             <th width="100">Aksi</th>
                         </tr>
                     </thead>
-                    
+                    @foreach($pemakaian as $data)
+                        <tr>
+                            <!-- <td>{{ $loop->iteration }}</td> -->
+                            <td>{{ $data->id_persediaans }}</td>
+                            <td>{{ $data->stock }}</td>
+                            <td>{{ $data->status }}</td>
+                            <td>{{ $data->tanggal }}</td>
+                            <td>{{ $data->kadaluarsa }}</td>
+                        </tr>
+                        <td>
+                                <a type="button" name="edit" id="{{ $data->id }}" value="{{ $data->id }}" class="btn btn-success" href="{{ route('user_edit', $data->id) }}">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                            </td>
+                        @endforeach
                 </table>
             </div>
         </div>
