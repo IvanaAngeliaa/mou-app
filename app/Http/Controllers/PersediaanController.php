@@ -12,7 +12,7 @@ class PersediaanController extends Controller
     public function persediaan_index()
     {
         $persediaan = Persediaan::all();
-        $pemakaian = Pemakaian::all();
+        $pemakaian = Pemakaian::with("persediaan")->get();
         //$pemakaian = Pemakaian::join('persediaans', 'pemakaians.id_persediaan', '=', 'persediaans.id')->get();
         return view('persediaan.persediaan', compact('persediaan','pemakaian'));
     }

@@ -16,4 +16,8 @@ class Pemakaian extends Model
         'kadaluarsa',
         'status'
     ];
+
+    public function persediaan() {
+        return $this->belongsTo("App\Models\Persediaan", "id_persediaans");
+    }
 }

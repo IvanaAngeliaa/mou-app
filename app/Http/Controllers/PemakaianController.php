@@ -13,7 +13,7 @@ class PemakaianController extends Controller
 {
     public function pemakaian_index()
     {
-        $data = Pemakaian::all();
+        $data = Pemakaian::with("persediaan")->get();
         $data = Persediaan::all();
        // $persediaan = Persediaan::join('pemakaians', 'persediaans.id_pemakaians', '=', 'pemakaians.id')->get();
         return view('pemakaian.pemakaian', compact('data','persedian'));

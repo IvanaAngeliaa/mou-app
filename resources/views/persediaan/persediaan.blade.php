@@ -78,7 +78,7 @@
                     @foreach($pemakaian as $data)
                         <tr>
                             <!-- <td>{{ $loop->iteration }}</td> -->
-                            <td>{{ $data->namabarang }}</td>
+                            <td>{{ $data->persediaan->namabarang }}</td>
                             <td>{{ $data->stock }}</td>
                             <td>{{ $data->status }}</td>
                             <td>{{ $data->tanggal }}</td>
