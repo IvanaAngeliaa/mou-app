@@ -13,15 +13,16 @@
             </h6>
         </div>
         <form action="{{ route('produk_update', $data->id) }}" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="idproduk" value="<?=$data['idproduk'];?>">
+        @csrf
+        <input type="hidden" name="id" value="{{ $data->id }}">
         <div class="card-body">
             <div class="form-group">
                 <label>Nama Produk:</label>
-                <input type="text" class="form-control" placeholder="Masukan Nama Produk" name="namaproduk" required value="<?=$data['namaproduk'];?>">
+                <input type="text" class="form-control" placeholder="Masukan Nama Produk" name="namaproduk" value="{{ $data->namaproduk }}">
             </div>
             <div class="form-group">
                 <label>Harga:</label>
-                <input type="number" class="form-control" placeholder="Masukan harga" name="harga" required value="<?=$data['harga'];?>">
+                <input type="number" class="form-control" placeholder="Masukan harga" name="harga" value="{{ $data->harga }}">
             </div>
             <div class="form-group">
                 <label>Foto:

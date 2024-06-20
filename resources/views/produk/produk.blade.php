@@ -38,15 +38,22 @@
                             <td>{{ $data->harga }}</td>
                             <td>
                                 @if($data->foto)
-                                    <img src="{{ url('storage/produk/'.$data->foto) }}" alt="Profile Picture" style="width: 50px; height: 50px;">
+                                    <img src="{{ url('storage/produk/'.$data->foto) }}" alt="Profile Picture" style="width: 100px; height: 75px;">
                                 @else
                                     <p>Tidak ada gambar</p>
                                 @endif
                             </td>
                             <td>
-                                <a name="delete" id="{{$data->id}}" value="{{$data->id}}" class="btn btn-danger" onclick="return confirm('Apakah ingin menghapus user?')">
-                                    <i class="fas fa-trash-alt"></i>
+                            <a type="button" name="edit" id="{{ $data->id }}" value="{{ $data->id }}" class="btn btn-success" href="{{ route('produk_edit', $data->id) }}">
+                                    <i class="fas fa-edit"></i>
                                 </a>
+                                <form id="del_event"  method="post" action="{{route('produk_hapus', $data->id)}}" style="display: inline;">
+                                    @csrf
+                                    <button type="submit" class="btn btn-danger deleteBtn"><i class="fas fa-trash-alt"></i></button>
+                                </form>
+                                {{-- <a name="delete" id="{{$data->id}}" value="{{$data->id}}" class="btn btn-danger deleteBtn">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a> --}}
                             </td>
                         </tr>
                         @endforeach
@@ -56,6 +63,29 @@
             </div>
         </div>
     </div>
-
 </div>
+@endsection
+@section('script')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    $(document).on('click', '.deleteBtn', function (e) {
+        e.preventDefault();
+        var form = $(this).parents('form');
+        swal.fire({
+            title: 'Apakah Anda yakin?',
+            text: 'Data yang dihapus tidak dapat dikembalikan!',
+            icon: 'warning',
+            cancelButtonText: "Batal",
+            showCancelButton: true,
+            confirmButtonText: 'Ya, Hapus!',
+        }).then((result)=>{
+            if(result.isConfirmed){
+                form.submit();
+                swal.close();
+            }else{
+                swal.close();
+            }
+        })
+    });
+</script>
 @endsection

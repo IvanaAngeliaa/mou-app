@@ -20,7 +20,7 @@
                 <select name="id" class="form-control">
                         <option value=""selected disabled hidden>Pilih ID Barang</option>
                         @foreach($data as $d)
-                            <option value="{{$d->id}}">{{$d->id}}</option>
+                            <option value="{{$d->id}}">{{$d->namabarang}}</option>
                         @endforeach
                     </select>
             </div>

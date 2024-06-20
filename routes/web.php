@@ -42,8 +42,10 @@ Route::post('/user-hapus/{id}', [User::class, 'user_hapus'])->name('user_hapus')
 //Produk
 Route::get('/produk', [Produk::class, 'produk_index'])->name('produk_index');
 Route::get('/produk-tambah', [Produk::class, 'produk_tambah'])->name('produk_tambah');
-Route::get('/produk-edit/{id}', [User::class, 'produk_edit'])->name('produk_edit');
+Route::get('/produk-edit/{id}', [Produk::class, 'produk_edit'])->name('produk_edit');
 Route::post('/produk-simpan', [Produk::class, 'produk_simpan'])->name('produk_simpan');
+Route::post('/produk-update/{id}', [Produk::class, 'produk_update'])->name('produk_update');
+Route::post('/produk-hapus/{id}', [Produk::class, 'produk_hapus'])->name('produk_hapus');
 
 //Persediaan
 Route::get('/persediaan', [Persediaan::class, 'persediaan_index'])->name('persediaan_index');
@@ -53,6 +55,7 @@ Route::post('/persediaan-simpan', [Persediaan::class, 'persediaan_simpan'])->nam
 //Pemakaian
 Route::get('/pemakaian', [Pemakaian::class, 'pemakaian_index'])->name('pemakaian_index');
 Route::get('/pemakaian-tambah', [Pemakaian::class, 'pemakaian_tambah'])->name('pemakaian_tambah');
-Route::get('/pemakaian-edit/{id}', [User::class, 'pemakaian_edit'])->name('pemakaian_edit');
+Route::get('/pemakaian-edit/{id}', [Pemakaian::class, 'pemakaian_edit'])->name('pemakaian_edit');
 Route::post('/pemakaian-simpan', [Pemakaian::class, 'pemakaian_simpan'])->name('pemakaian_simpan');
-Route::post('/pemakaian-hapus/{id}', [User::class, 'pemakaian_hapus'])->name('pemakaian_hapus');
+Route::post('/pemakaian-update/{id}', [Pemakaian::class, 'pemakaian_update'])->name('pemakaian_update');
+Route::post('/pemakaian-hapus/{id}', [Pemakaian::class, 'pemakaian_hapus'])->name('pemakaian_hapus');

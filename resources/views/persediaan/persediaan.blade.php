@@ -31,9 +31,8 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $data->namabarang }}</td>
                             <td>{{ $data->kategori->namakategori}}</td>
-                            <td>{{ $data->minimalstock }}</td>
+                            <td class="{{ $data->minimalstock == 0 ? 'text-danger' : '' }}">{{ $data->minimalstock }}</td>
                             <td>{{ $data->satuan }}</td>
-                            
                         </tr>
                         @endforeach
                         
@@ -103,4 +102,28 @@
         </div>
     </div>
 </div>
+@endsection
+@section('script')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    $(document).on('click', '.deleteBtn', function (e) {
+        e.preventDefault();
+        var form = $(this).parents('form');
+        swal.fire({
+            title: 'Apakah Anda yakin?',
+            text: 'Data yang dihapus tidak dapat dikembalikan!',
+            icon: 'warning',
+            cancelButtonText: "Batal",
+            showCancelButton: true,
+            confirmButtonText: 'Ya, Hapus!',
+        }).then((result)=>{
+            if(result.isConfirmed){
+                form.submit();
+                swal.close();
+            }else{
+                swal.close();
+            }
+        })
+    });
+</script>
 @endsection

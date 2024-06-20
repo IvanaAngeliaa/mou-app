@@ -14,6 +14,7 @@ class PersediaanController extends Controller
         $persediaan = Persediaan::all();
         $pemakaian = Pemakaian::with("persediaan")->get();
         //$pemakaian = Pemakaian::join('persediaans', 'pemakaians.id_persediaan', '=', 'persediaans.id')->get();
+        
         return view('persediaan.persediaan', compact('persediaan','pemakaian'));
     }
 
