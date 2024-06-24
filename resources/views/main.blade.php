@@ -12,16 +12,16 @@
     <title>Aplikasi Web Kelas BD-B :: Dashboard</title>
 
     <!-- Custom fonts for this template-->
-    <link href="{{asset('mou_project-main/admin/themes/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('css/all.min.css')}}" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="{{asset('mou_project-main/admin/themes/css/sb-admin-2.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="{{asset('mou_project-main/admin/themes/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+    <link href="{{asset('vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
 
     <style>
         .bg_mou{
@@ -67,7 +67,7 @@
                     <i class="fas fa-laugh-wink"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">MOU</div> -->
-                <img src = "{{asset('mou_project-main/images/logo-putih.svg')}}" class="col-sm-7">
+                <img src = "{{asset('images/logo-putih.svg')}}" class="col-sm-7">
             </a>
         
             <!-- Divider -->
@@ -149,7 +149,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
                                 <img class="img-profile rounded-circle"
-                                    src="{{asset('mou_project-main/images/cwe.jpg')}}">
+                                    src="{{asset('images/cwe.jpg')}}">
                             </a>
                             
                 

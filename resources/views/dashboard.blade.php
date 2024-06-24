@@ -34,7 +34,7 @@
                         </div>
                         <div class="card-body">
                             
-                            <img style="border-radius: 1000px" src="{{asset('mou_project-main/images/ivaa.png')}}" class="col-sm-12">
+                            <img style="border-radius: 1000px" src="{{asset('images/ivaa.png')}}" class="col-sm-12">
                         </div>
                         <div class="card-footer btn-custom" >
                             <div >
@@ -54,7 +54,7 @@
                         </div>
                         <div class="card-body">
                             
-                            <img style="border-radius: 1000px" src="{{asset('mou_project-main/images/ester.jpg')}}" class="col-sm-12">
+                            <img style="border-radius: 1000px" src="{{asset('images/ester.jpg')}}" class="col-sm-12">
                         </div>
                         <div class="card-footer btn-custom">
                             <div >
@@ -74,7 +74,7 @@
                         </div>
                         <div class="card-body">
                             
-                            <img style="border-radius: 1000px" src="{{asset('mou_project-main/images/clay.png')}}" class="col-sm-12">
+                            <img style="border-radius: 1000px" src="{{asset('images/clay.png')}}" class="col-sm-12">
                         </div>
                         <div class="card-footer btn-custom">
                             <div >
