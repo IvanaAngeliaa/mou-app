@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" hrefjs/output.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     
@@ -15,13 +15,13 @@
 
 <body>
     <div id="navbar" class="flex flex-row items-center justify-center z-10 bg-amber-50">
-        <img src="images/Logo Cokelat.png" alt="" class="w-16 mt-10 z-10">
+        <img src="js Cokelat.png" alt="" class="w-16 mt-10 z-10">
     </div>
 
     <div id="hero" class="relative w-full h-auto sm:h-auto md:h-screen lg:h-screen bg-amber-50 flex justify-center items-center overflow-hidden">
-        <img src="images/hero-ornamen.png" alt="" class="z-0 absolute w-full sm:w-full md:w-full lg:w-2/3 bottom-[-150px] sm:bottom-[-150px] md:bottom-[-20px] lg:bottom-[-400px] opacity-50">
-        <img src="images/hero-daun.png" alt="" class="z-0 absolute bottom-[10px] sm:bottom-[10px] md:bottom-[-20px] lg:bottom-[-40px] w-6/7 opacity-60">
-        <img src="images/hero-kue.png" alt="" class="z-5 absolute bottom-[5px] sm:bottom-[5px] md:bottom-[-400px] lg:bottom-[-80px] px-2 sm:px-2 md:px-5 lg:px-10" data-aos="zoom-in-up" data-aos-delay="400">
+        <img src="js-ornamen.png" alt="" class="z-0 absolute w-full sm:w-full md:w-full lg:w-2/3 bottom-[-150px] sm:bottom-[-150px] md:bottom-[-20px] lg:bottom-[-400px] opacity-50">
+        <img src="js-daun.png" alt="" class="z-0 absolute bottom-[10px] sm:bottom-[10px] md:bottom-[-20px] lg:bottom-[-40px] w-6/7 opacity-60">
+        <img src="js-kue.png" alt="" class="z-5 absolute bottom-[5px] sm:bottom-[5px] md:bottom-[-400px] lg:bottom-[-80px] px-2 sm:px-2 md:px-5 lg:px-10" data-aos="zoom-in-up" data-aos-delay="400">
 
         <div class="hero-text flex flex-col justify-center items-center mt-10 pb-[250px] sm:pb-[250px] md:pb-[360px] lg:pb-[360px] z-10 overflow-hidden" data-aos="fade-up" data-aos-delay="300">
             <div class="headline">
@@ -40,12 +40,12 @@
             </div>
         </div>
 
-        <img src="images/lengkungan-cokelat.png" class="absolute bottom-0 w-full" alt="">
+        <img src="js-cokelat.png" class="absolute bottom-0 w-full" alt="">
     </div>
 
     <div id="cerita-kami"
         class="flex flex-col justify-center items-center text-zinc-800 bg-brown-mou px-5 pt-16 pb-24 sm:px-5 md:px-10 lg:px20 overflow-hidden relative">
-        <img src="images/background-cerita.png" alt="" class="absolute bottom-0 w-2/3 opacity-10">
+        <img src="js-cerita.png" alt="" class="absolute bottom-0 w-2/3 opacity-10">
         <h1 class=" text-center text-3xl mb-3 text-amber-50 z-10" data-aos="fade-up" data-aos-delay="200">Cerita Kami
         </h1>
         <h4 class="text-center text-lg sm:text-lg md:text-lg xl:text-lg leading-6 w-5/6 sm:w-5/6 md:w-4/5 lg:w-3/6 text-amber-50 z-10" data-aos="fade-up" data-aos-delay="300">
@@ -54,7 +54,7 @@
     </div>
 
     <div id="foto-kulkas" class="h-[10rem] sm:h-[10rem] md:h-[20rem] lg:h-[30rem] overflow-clip">
-        <img src="images/Kulkas.jpg" alt="" class="w-full h-full object-cover">
+        <img srcjs/Kulkas.jpg" alt="" class="w-full h-full object-cover">
     </div>
 
     <div id="produk" class="bg-amber-50 py-12 flex flex-col justify-center items-center relative">
@@ -68,7 +68,7 @@
                 <!-- Tiramisu -->
                 <div class="card-wrapper rounded-xl mb-10 z-10 flex justify-center items-center">
                     <div class="card relative ">
-                        <img src="images/produk/tiramisu.png" alt="" class="h-[13rem] sm:h-[13rem] lg:h-[26rem] rounded-xl">
+                        <img src="js/tiramisu.png" alt="" class="h-[13rem] sm:h-[13rem] lg:h-[26rem] rounded-xl">
                         <div class="produk-info absolute top-6 left-8">
                             <h1 class="text-white text-2xl">Tiramisú mille crepes</h1>
                             <h4 class="text-white text-sm">18k/slice | 145k/loyang</h4>
@@ -79,7 +79,7 @@
                 <!-- Caramel -->
                 <div class="card-wrapper rounded-xl mb-10 z-10 flex justify-center items-center">
                     <div class="card relative">
-                        <img src="images/produk/caramou.png" alt="" class="h-[13rem] sm:h-[13rem] lg:h-[26rem] rounded-xl">
+                        <img src="js/caramou.png" alt="" class="h-[13rem] sm:h-[13rem] lg:h-[26rem] rounded-xl">
                         <div class="produk-info absolute top-6 left-8">
                             <h1 class="text-white text-2xl">Caramou mille crepes</h1>
                             <h4 class="text-white text-sm">20k/slice | 160k/loyang</h4>
@@ -90,7 +90,7 @@
                 <!-- Matcha -->
                 <div class="card-wrapper rounded-xl mb-10 z-10 flex justify-center items-center">
                     <div class="card relative">
-                        <img src="images/produk/moucha.png" alt="" class="h-[13rem] sm:h-[13rem] lg:h-[26rem] rounded-xl">
+                        <img src="js/moucha.png" alt="" class="h-[13rem] sm:h-[13rem] lg:h-[26rem] rounded-xl">
                         <div class="produk-info absolute top-6 left-8">
                             <h1 class="text-white text-2xl">Moucha mille crepes</h1>
                             <h4 class="text-white text-sm">17k/slice | 135k/loyang</h4>
@@ -101,7 +101,7 @@
                 <!-- Mouberry Mini Cake -->
                 <div class="card-wrapper rounded-xl mb-10 z-10 flex justify-center items-center">
                     <div class="card relative">
-                        <img src="images/produk/mouberry.png" alt="" class="h-[13rem] sm:h-[13rem] lg:h-[26rem] rounded-xl">
+                        <img src="js/mouberry.png" alt="" class="h-[13rem] sm:h-[13rem] lg:h-[26rem] rounded-xl">
                         <div class="produk-info absolute top-6 left-8">
                             <h1 class="text-white text-2xl">Mouberry mini cake</h1>
                             <h4 class="text-white text-sm">35k/pcs</h4>
@@ -112,7 +112,7 @@
                 <!-- Custom Bento Cake -->
                 <div class="card-wrapper rounded-xl mb-10 z-10 flex justify-center items-center">
                     <div class="card relative">
-                        <img src="images/produk/custom-bento.png" alt="" class="h-[13rem] sm:h-[13rem] lg:h-[26rem] rounded-xl">
+                        <img src="images/js-bento.png" alt="" class="h-[13rem] sm:h-[13rem] lg:h-[26rem] rounded-xl">
                         <div class="produk-info absolute top-6 left-8">
                             <h1 class="text-white text-2xl">Custom bento cake</h1>
                             <h4 class="text-white text-sm">Start from 65k</h4>
@@ -123,14 +123,14 @@
                 <!-- Cover -->
                 <div class="card-wrapper rounded-xl mb-10 z-10 flex justify-center items-center">
                     <div class="card relative">
-                        <img src="images/produk/cover.png" alt="" class="h-[15rem] sm:h-[15rem] lg:h-[30rem] rounded-xl">
+                        <img src="js/cover.png" alt="" class="h-[15rem] sm:h-[15rem] lg:h-[30rem] rounded-xl">
 
                     </div>
                 </div>
             </div>
         </div>
-        <img src="images/background-menu-atas.png" alt="" class="absolute top-0 w-full z-0 opacity-70">
-        <img src="images/background-menu.png" alt="" class="absolute bottom-0 w-full  z-0 opacity-70">
+        <img src="images/js-atas.png" alt="" class="absolute top-0 w-full z-0 opacity-70">
+        <img src="js-menu.png" alt="" class="absolute bottom-0 w-full  z-0 opacity-70">
     </div>
 
     <div id="kenapa-mou"
@@ -178,53 +178,53 @@
                 Ini kata mereka tentang Mille crepes dari Mou
             </h4>
         </div>
-        <img src="images/ceritakami-ornament.png" alt="" class="z-0 opacity-5 absolute">
+        <img src="js-ornament.png" alt="" class="z-0 opacity-5 absolute">
         <div class="testimoni-kartu z-10">
             <div class="mySwiper swiper-container px-20 py-20">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="img-container">
-                            <img src="images/foto-testi/1.svg" style="border-radius: 15px;">
+                            <img src="images/js/1.svg" style="border-radius: 15px;">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="img-container">
-                            <img src="images/foto-testi/2.svg" style="border-radius: 15px;">
+                            <img src="images/js/2.svg" style="border-radius: 15px;">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="img-container">
-                            <img src="images/foto-testi/3.svg" style="border-radius: 15px;">
+                            <img src="images/js/3.svg" style="border-radius: 15px;">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="img-container">
-                            <img src="images/foto-testi/4.svg" style="border-radius: 15px;">
+                            <img src="images/js/4.svg" style="border-radius: 15px;">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="img-container">
-                            <img src="images/foto-testi/5.svg" style="border-radius: 15px;">
+                            <img src="images/js/5.svg" style="border-radius: 15px;">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="img-container">
-                            <img src="images/foto-testi/6.svg" style="border-radius: 15px;">
+                            <img src="images/js/6.svg" style="border-radius: 15px;">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="img-container">
-                            <img src="images/foto-testi/7.svg" style="border-radius: 15px;">
+                            <img src="images/js/7.svg" style="border-radius: 15px;">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="img-container">
-                            <img src="images/foto-testi/8.svg" style="border-radius: 15px;">
+                            <img src="images/js/8.svg" style="border-radius: 15px;">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="img-container">
-                            <img src="images/foto-testi/9.svg" style="border-radius: 15px;">
+                            <img src="images/js/9.svg" style="border-radius: 15px;">
                         </div>
                     </div>
                 </div>
@@ -305,6 +305,6 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
 
-<script src="Mou/src/script.js"></script>
+<script src="js/script.js"></script>
 
 </html>
