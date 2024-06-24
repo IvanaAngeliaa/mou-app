@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Mou Login</title>
-        <link rel="stylesheet" href="{{asset('css/login-style.css')}}">
+        <link rel="stylesheet" href="css/login-style.css">
     </head>
         <body>
             <div class="container">
