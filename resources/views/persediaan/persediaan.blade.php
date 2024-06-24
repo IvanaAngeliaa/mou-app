@@ -31,7 +31,7 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $data->namabarang }}</td>
                             <td>{{ $data->kategori->namakategori}}</td>
-                            <td class="{{ $data->minimalstock == 0 ? 'text-danger' : '' }}">{{ $data->minimalstock }}</td>
+                            <td class="{{ $data->stock <= $data->minimalstock ? 'text-danger' : '' }}">{{ $data->stock }}</td>
                             <td>{{ $data->satuan }}</td>
                         </tr>
                         @endforeach

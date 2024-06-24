@@ -13,6 +13,7 @@ class Persediaan extends Model
         'kategori',
         'namabarang',
         'minimalstock',
+        'stock',
         'satuan'
     ];
 

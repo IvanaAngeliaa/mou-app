@@ -38,9 +38,9 @@ class PemakaianController extends Controller
         if ($data->save()) {
             $persediaan = Persediaan::find($request->id);
             if ($request->status === 'masuk') {
-                $persediaan->minimalstock += $request->stock;
+                $persediaan->stock += $request->stock;
             } elseif ($request->status === 'keluar') {
-                $persediaan->minimalstock -= $request->stock;
+                $persediaan->stock -= $request->stock;
             }
             $persediaan->save();
         }
@@ -62,22 +62,22 @@ class PemakaianController extends Controller
         // Adjust the stock if the status has changed
         if ($data->status !== $request->status) {
             if ($data->status === 'masuk') {
-                $persediaan->minimalstock -= $data->stock;
+                $persediaan->stock -= $data->stock;
             } elseif ($data->status === 'keluar') {
-                $persediaan->minimalstock += $data->stock;
+                $persediaan->stock += $data->stock;
             }
 
             if ($request->status === 'masuk') {
-                $persediaan->minimalstock += $request->stock;
+                $persediaan->stock += $request->stock;
             } elseif ($request->status === 'keluar') {
-                $persediaan->minimalstock -= $request->stock;
+                $persediaan->stock -= $request->stock;
             }
         } else {
             // Adjust the stock based on the difference
             if ($data->status === 'masuk') {
-                $persediaan->minimalstock += ($request->stock - $data->stock);
+                $persediaan->stock += ($request->stock - $data->stock);
             } elseif ($data->status === 'keluar') {
-                $persediaan->minimalstock -= ($request->stock - $data->stock);
+                $persediaan->stock -= ($request->stock - $data->stock);
             }
         }
 
@@ -100,9 +100,9 @@ class PemakaianController extends Controller
         $persediaan = Persediaan::find($data->id_persediaans);
 
         if ($data->status === 'masuk') {
-            $persediaan->minimalstock -= $data->stock;
+            $persediaan->stock -= $data->stock;
         } elseif ($data->status === 'keluar') {
-            $persediaan->minimalstock += $data->stock;
+            $persediaan->stock += $data->stock;
         }
 
         $data->delete();

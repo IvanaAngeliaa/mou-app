@@ -15,7 +15,7 @@
             <div class="card shadow">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primaryx" style="color:#e0ba75";>
-                        Selamat datang,  
+                        Selamat datang!  
                     </h6>
                 </div>
                 <div class="card-body" align="center">
@@ -78,7 +78,7 @@
                         </div>
                         <div class="card-footer btn-custom">
                             <div >
-                               <i> "Lebih baik mencoba daripada tidak" </i>
+                               <i> "Lebih baik coba daripada tidak" </i>
                             </div>
                         </div>
                     </div>

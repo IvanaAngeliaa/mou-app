@@ -16,9 +16,9 @@
             @csrf
         <div class="card-body">
             <div class="form-group">
-                <label>ID Barang :</label>  
+                <label>Nama Barang :</label>  
                 <select name="id" class="form-control">
-                        <option value=""selected disabled hidden>Pilih ID Barang</option>
+                        <option value=""selected disabled hidden>Pilih Nama Barang</option>
                         @foreach($data as $d)
                             <option value="{{$d->id}}">{{$d->namabarang}}</option>
                         @endforeach
