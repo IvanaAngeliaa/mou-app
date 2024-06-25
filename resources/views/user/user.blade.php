@@ -40,7 +40,7 @@
                             <td>{{ $data->fullname }}</td>
                             <td>
                                 @if($data->profil)
-                                    <img src="{{ asset('storage/user/'.$data->profil) }}" alt="Profile Picture" style="width: 75px; height: 75px;">
+                                    <img src="storage/user/'.$data->profil)" alt="Profile Picture" style="width: 75px; height: 75px;">
                                 @else
                                     <p>Tidak ada gambar</p>
                                 @endif
